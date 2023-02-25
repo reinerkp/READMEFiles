@@ -1,34 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
-const questions = ({title, description, install, usage, collaborators,thirdparty}) =>
-`# <${title}>
 
-## Description 
-${description}
-
-## Table of Contents (Optional)
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
-## Needed Software
-${install}
-
-## Usage
-${usage}
-
-## Credits
-Collaborators worked with: ${collaborators}
-Third Parties used: ${thirdparty}
-
-## License
-
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-`
 inquirer
   .prompt([
     {
@@ -61,15 +36,15 @@ inquirer
       name: 'thirdparty',
       message: 'Enter a full list of Third-Party names you used for the project.',
     },
-    // {
-    //     type: 'list',
-    //     name: 'license',
-    //     message: 'Which lecense did you choose',
-    //     choices: [MIT]
-    //   },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Which lecense did you choose',
+        choices: ["MIT", "IBM", "Mozilla", "ISC", "None"]
+      },
   ])
   .then((answers) => {
-    const readmePageContent = questions(answers);
+    const readmePageContent = generateMarkdown(answers);
 
     fs.writeFile('README.md', readmePageContent, (err) =>
       err ? console.log(err) : console.log('Successfully created README.md!')
