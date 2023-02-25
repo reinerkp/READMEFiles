@@ -1,23 +1,24 @@
-# k
+# g
   ## Description 
-  j
+  g
   
   ## Table of Contents 
   
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
-  - [License](#license)
+  
+ 
   
   ## Needed Software
-  f
+  d
   
   ## Usage
-  n
+  s
   
   ## Credits
-  Collaborators worked with: w
-  Third Parties used: f
+  Collaborators worked with: g
+  Third Parties used: 
   
-  ## License
-  [![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
+   
+  
