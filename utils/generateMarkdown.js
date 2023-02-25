@@ -24,6 +24,7 @@ function generateMarkdown({
   collaborators,
   thirdparty,
   license,
+  github,
 }) {
   return `# ${title}
   ## Description 
@@ -49,7 +50,10 @@ function generateMarkdown({
   
   ${license === "None" ? "" : "## License"} 
   ${renderLicense(license)}
+
+  Visit my Github page at [${github}](https://github.com/${github})
 `;
+
 }
 
 module.exports = generateMarkdown;

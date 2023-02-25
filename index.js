@@ -17,6 +17,11 @@ inquirer
       message: 'Provide a brief description of your project. Include a description of why you built it and any challenges you came across along the way.',
     },
     {
+        type: 'input',
+        name: 'github',
+        message: 'What is your github username?',
+      },
+    {
       type: 'input',
       name: 'install',
       message: 'give instructions for how to properly install any software and run the application?',
